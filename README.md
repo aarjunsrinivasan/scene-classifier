@@ -11,7 +11,7 @@
 7. Download the given dataset and store it in data folder
 8. Run ```final.py --datain "./data" --dataout "./out/"``` for the best found model which fits and evaluates the model. 
    Pass data input folder and output folder location.
-   
+
 9. Run  ```evaluate_sceneseg.py --datadir "./out/"``` for getting the evaluation results
 
 
@@ -73,7 +73,7 @@ Scores: {
 ### Baseline 4: KNN with Oversampling followed by Undersamplimg
 
 Test accuracy is :  0.6843177958105303
-1```
+```
 Scores: {
     "AP": 0.2634912915127264,
     "mAP": 0.27305655507348414,
