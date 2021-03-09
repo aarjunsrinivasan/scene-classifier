@@ -1,5 +1,11 @@
 import numpy as np
 from sklearn.metrics import average_precision_score
+import os
+import sys
+import glob
+import json
+import pickle
+import argparse
 
 
 def calc_ap(gt_dict, pr_dict):
@@ -146,13 +152,18 @@ def calc_precision_recall(gt_dict, pr_dict, threshold=0.5):
 
 
 if __name__ == "__main__":
-    import os
-    import sys
-    import glob
-    import json
-    import pickle
+    parser = argparse.ArgumentParser(description='Params')
 
-    data_dir = sys.argv[1]
+    parser.add_argument(
+        '--datadir',
+        required=False,
+        default="",
+    )
+
+    args = parser.parse_args()
+
+    # data_dir = sys.argv[1]
+    data_dir = args.datadir
     filenames = glob.glob(os.path.join(data_dir, "tt*.pkl"))
 
     print("# of IMDB IDs:", len(filenames))
