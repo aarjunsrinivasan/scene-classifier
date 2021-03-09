@@ -1,12 +1,19 @@
 # scene-classifier
 
 1. The final output of the problem is a binary classification problem. 
-2. Initially I found out the cosine similarity between consecutivve shots.
-3. As the four features place,act,cast,audio are distinct so I wanted to fit a nonline boundary., I chose KNN classifier.
+2. Initially I found out the cosine similarity between consecutive shots.
+3. As the four features place,act,cast,audio are distinct so I wanted to fit a nonline boundary. I chose KNN and RandomForest classifier.
 4. Since there is impbalance in datasets I went ahead with sampling techniques and as expected Oversampling performed well compared to undersampling.
 
 
-### Check install.md for package installations
+5. Check install.md for package installations
+6. Check Ml_imbalance.ipynb for results and analysis
+7. Download the given dataset and store it in data folder
+8. Run ```final.py --datain "./data" --dataout "./out/"``` for the best found model which fits and evaluates the model. 
+   Pass data input folder and output folder location.
+   
+9. Run  ```evaluate_sceneseg.py --datadir "./out/"``` for getting the evaluation results
+
 
 ### Given coarse preictions: 
 

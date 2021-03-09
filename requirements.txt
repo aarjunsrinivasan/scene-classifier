@@ -9,3 +9,4 @@ pillow==8.1.0
 scikit-learn==0.24.1
 notebook
 scipy
+argparse
